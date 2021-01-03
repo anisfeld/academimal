@@ -1,0 +1,29 @@
+{{ range . }}
+    <p class="my_title info_spacer">
+        {{ with .pdflink }}<a href="{{ . }}" target="blank" class="my_title info_spacer">{{ end }}
+            {{ .title }}
+        {{ with .pdflink }}</a>{{ end }}
+    </p>
+    <p>
+    {{ with .coauthors }}(with {{ . }})<br>{{ end }}
+    {{ with .journal }}<em>{{ . }}</em>{{ end }}
+    {{ with .draft_date }}Draft, {{ . }}{{ end }}
+    <br>
+    {{ with .links }}
+        {{ range . }}
+        <span style="margin-right: .8em">
+        <a href="{{ .url }}"  target="blank">{{ .text }}</a>{{ with .note }}: {{ . }}{{ end }}
+        </span><br>
+        {{ end }}
+    {{ end }}
+
+    {{ with .abstract }}
+    <!-- to have Abstracts close by default change class to  class="accordion" -->
+    <button class="accordion active"> Abstract </button>
+    <!-- to have Abstracts close by default change class to  class="panel" -->
+    <div class="panel active show" style="background-color: #F1F1F1; color: #666; padding: 10px;">
+        {{ . }}
+    </div>
+    {{ end }}
+    </p>
+{{ end }}

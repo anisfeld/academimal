@@ -1,0 +1,30 @@
+{{ define "main" -}}
+
+{{ .Content }}
+
+
+{{ range .Site.Data.publications }}
+
+{{ with .working_papers }}
+    <hr>
+    <h3>Working Papers</h3>
+    {{ partial "papers.html"  . }}
+{{ end }}
+
+
+{{ with .work_in_progress }}
+    <hr>
+    <h3>Work in Progress</h3>
+    {{ partial "papers.html"  . }}
+{{ end }}
+
+
+{{ with .publications }}
+    <hr>
+    <h3>Publications</h3>
+    {{ partial "papers.html"  . }}
+{{ end }}
+{{ end }}
+
+
+{{- end }}

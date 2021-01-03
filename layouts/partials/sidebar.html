@@ -1,0 +1,23 @@
+<section class="sidebar d-flex align-items-center p-5">
+  <div>
+    <img src="{{.Site.BaseURL}}/{{ .Site.Params.logo }}" class="rounded-circle mb-3" width="200px">
+
+    <h1 class="heading">{{ .Site.Title }}</h1>
+    <p class="text-muted">{{ .Site.Params.shortbio }}</p>
+
+    <p><a href="{{ "/" | relURL }}">Home</a></p>
+    {{ range .Site.Menus.main }}
+    <p><a href="{{ .URL | relURL }}">{{- .Name -}}</a></p>
+    {{ end }}
+    <hr/>
+
+    <div class="compact-sidebar">
+    <p><a href="http://github.com/leima0521" target="_blank">GitHub</a></p>
+    <p><a href="{{.Site.BaseURL}}pdf/example.pdf" target="_blank">CV</a></p>
+    </div>
+
+      <p><small>Copyright © 2010-{{ now.Format "2006" }} {{ .Site.Author.name }}<br/>Last updated on {{ now.Format "Jan 2, 2006" }}</small></p>
+  </div>
+
+
+</section>
