@@ -3,8 +3,8 @@
 Academimal is a two-column [Hugo](https://gohugo.io/) theme for researchers.
 It is based on the awesome [Jekyll](https://jekyllrb.com) theme
 [Minimal](https://pages-themes.github.io/minimal/) created by
-[orderdlist](https://github.com/orderedlist). This fork integrates the sidebar 
-and header from [hugo-uilite](https://github.com/uicardiodev/hugo-uilite) and
+[orderdlist](https://github.com/orderedlist) as completed by [Lei Yang](https://github.com/yangl1996/academimal). 
+This fork integrates the sidebar and header from [hugo-uilite](https://github.com/uicardiodev/hugo-uilite) and
 css from [Paul Goldsmith Pinkham](https://paulgp.github.io/).
 
 ## Features
